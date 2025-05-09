@@ -6,39 +6,35 @@
   <link rel="stylesheet" href="eruamero.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    /* TEMP STYLE for demo visibility (optional, remove if you already styled it) */
     .about-section { display: none; }
   </style>
 </head>
 <body>
 
-  <!-- Header/Banner -->
   <header class="banner" id="banner">
     <a href="#" class="login-btn" onclick="showSection('login')">LOGIN</a>
     <div class="banner-center">
       <img src="icon.jpg" alt="Profile Picture" class="profile-img">
-      <h1>HELLO<br>MY NAME IS EMERY RUAMERO</h1>
+      <h1>HELLO!<br>MY NAME IS EMERY JANESSA</h1>
       <div class="motto-box">hahshahhsha</div>
       <a href="#" class="btn" onclick="showSection('about')">ABOUT ME</a>
     </div>
   </header>
 
-  <!-- About Section -->
   <section id="about" class="about-section">
     <div class="about-container">
       <div class="info-box">
         <img src="icon.jpg" alt="Profile" class="about-img">
         <h2>Personal Information</h2>
-        <p><strong>Name:</strong> Emery Ruamero</p>
+        <p><strong>Name:</strong> Emery Janessa F. Ruamero</p>
         <p><strong>Age:</strong> 20</p>
         <p><strong>Phone:</strong> 09123456789</p>
-        <p><strong>Email:</strong> emeryjanessa@gmail.com</p>
+        <p><strong>Email:</strong> Emery.ruamero.coi@pcu.edu.ph</p>
         <a href="#" class="btn" onclick="showSection('banner')">BACK</a>
       </div>
     </div>
   </section>
 
-<!-- Login Section -->
 <section id="login" class="about-section">
     <div class="about-container">
       <div class="info-box login-box">
@@ -55,36 +51,41 @@
     </div>
   </section>
   
-
-  <!-- Dashboard -->
   <section id="dashboard" class="about-section">
     <div class="about-container">
       <div class="info-box">
-        <h2>Emery Ruamero</h2>
-        <p>PCU Manila, Philippines</p>
-
+        <div id="profile-info">
+          <h2 id="profile-name">Emery Ruamero</h2>
+          <p id="profile-location">PCU Manila, Philippines</p>
+        </div>
+  
+        <div id="profile-edit" style="display:none;">
+          <input type="text" id="edit-name" value="Emery Ruamero" />
+          <input type="text" id="edit-location" value="PCU Manila, Philippines" />
+        </div>
+  
         <nav class="menu">
           <ul class="nav-bar">
             <li><a href="#" onclick="showSection('banner')">Home</a></li>
-
+  
             <li>
-              <span>MyProfile</span>
+              <span onclick="toggleSubmenu(event, this)">MyProfile</span>
               <ul class="submenu">
-                <li><a href="#">View</a></li>
-                <li><a href="#">Edit</a></li>
+                <li><a href="#" onclick="toggleProfileMode('view')">View</a></li>
+                <li><a href="#" onclick="toggleProfileMode('edit')">Edit</a></li>
+              </ul>
+            </li>
+  
+            <li>
+              <span onclick="toggleSubmenu(event, this)">MyCollege</span>
+              <ul class="submenu">
+                <li><a href="#" onclick="showMissionVision()">Mission and Vision</a></li>
+                <li><a href="#" onclick="showDeanInfo()">Dean</a></li>
+                <li><a href="#" onclick="showFacultyInfo()">Faculty</a></li>
               </ul>
             </li>
 
-            <li>
-                <span>MyCollege</span>
-                <ul class="submenu">
-                  <li><a href="#" onclick="showMissionVision()">Mission and Vision</a></li>
-                  <li><a href="#" onclick="showDeanInfo()">Dean</a></li>
-                  <li><a href="#"onclick="showFacultyInfo()">Faculty</a></li>
-                </ul>
-              </li>
-
-            <li><a href="http://localhost/eruamero/quiz.html" target="_blank">MyQuiz</a></li>
+            <li><a href="http://localhost/eruamero/quiz.php" target="_blank">MyQuiz</a></li>
           </ul>
         </nav>
 
@@ -93,7 +94,6 @@
     </div>
   </section>
 
- <!-- Mission and Vision Section -->
 <section id="mission-vision" class="about-section" style="display: none;">
     <div class="about-container">
       <div class="info-box">
@@ -110,7 +110,6 @@
     </div>
   </section>
 
-<!-- Dean's Information Section -->
 <section id="dean-info" class="about-section" style="display: none;">
     <div class="about-container">
       <div class="info-box">
@@ -119,121 +118,172 @@
           <img src="dean.png" alt="Dean's Picture" class="dean-img">
         </div>
         <div class="dean-name">
-            <h2><strong>Junifen F. Gauuan (2014 - Present)</strong></h2>
+            <h2><strong>Norman B. Ramos, Ph.D.</strong></h2>
           </div>
-  
-        <p>He completed his PhD in Development Administration (2007) from the Philippine Christian University, Manila.</p>
-
-        <p>He finished his Bachelor of Science in Business Economics (with Merit) and M.B.A. degrees from the University of the Philippines, Diliman, Quezon City.</p>
-
-        <p>He had been a National State Scholar of the Department of Education (1972-76), UNIVAC Summer Scholar (1977), a recipient of AIDAB Fellowship for Rural and Environmental Development at Macquarie University in Australia (1995) and the FAPE-UNICEF Fellowship for Higher Education Management In Asia at SEAMEO-INNOTECH, Quezon City (1998).</p>
-
-        <p>Dr. Gauuan has extensive management, research and development experiences in the fields of business, governance, education, health, information system, rural marketing and finance, agroforestry and environment.</p>
-
-        <p>Dr. Gauuan has served in the Governing and Advisory Boards of government, educational, civic and religious organizations.</p>
-
-        <p>He had been Church Council Chairman of Bayombong United Methodist Church (1996-2014), a regular member of the Northeast Philippines Annual Conference and the Philippines Central Conference, and a 2004 Delegate to the General Conference of The United Methodist Church in Pittsburgh, Pennsylvania, USA. Dr. Gauuan is currently President of Philippine Christian University and ICA Associates Philippines, Inc.</p>
-
-        <p>He is a Trustee of the Association of Christian Schools, Colleges and Universities (ACSCU), Coordinating Council of Private Educational Associations in the Philippines (COCOPEA) and the South Manila Educational Consortium (SMEC).</p>
-
-        <p>He also served as President of Aldersgate College, Solano Nueva Vizcaya (October 1982 - May 2014) and Board Chairman of Wesleyan University Philippines, Cabanatuan City, Nueva Ecija (2010-2014).
+        <p>Post Ph.D. in Strategic Management and Leadership</p>
+        <p>Ph.D. in Business Management Major in Information Technology</p>
+        <p>Master of Information Technology</p>
+        <p>Bachelor of Science in Information Technology</p>
+        <p>Bachelor of Science in Computer Engineering</p>
         </p>
+
         <a href="#" class="btn" onclick="showSection('dashboard')">BACK</a>
       </div>
     </div>
   </section>
 
-<!-- Faculty Section -->
 <section id="faculty-info" class="about-section" style="display: none;">
     <div class="about-container">
       <div class="info-box">
         <h2>Faculty Members</h2>
   
         <p>
-          <strong style="color: black;">Junifen F. Gauuan, Ph.D.</strong><br>
-          <em style="color: #8d0000;">University President</em>
+          <strong style="color: black;">Edgar E. De Castro, M.I.T</strong><br>
+          <em style="color: #8d0000;">Master of Information Technology<br>BS Computer Science</em>
         </p>
   
         <p>
-          <strong style="color: black;">Margie DG Dela Cruz, Ph.D.</strong><br>
-          <em style="color: #8d0000;">Vice President for Academics and Globalization<br>(Concurrent Head, Extension Group)</em>
+          <strong style="color: black;">Renato I. Miller, M.I.T</strong><br>
+          <em style="color: #8d0000;">Licensed ECE<br>Master of Information Technology<br>BS Electronics and Communication Engineering</em>
         </p>
   
         <p>
-          <strong style="color: black;">Mario G. Miranda II, Ph.D.</strong><br>
-          <em style="color: #8d0000;">Vice President for Information and Communications Technology and Student Services<br>(Head, Technical and Student Services Cluster)</em>
+          <strong style="color: black;">Camille Magsalin</strong><br>
+          <em style="color: #8d0000;">Part-Time Faculty</em>
         </p>
   
         <p>
-          <strong style="color: black;">Mark Jetro M. Cababan, Ph.D., CPA</strong><br>
-          <em style="color: #8d0000;">Vice President for Business and Finance<br>(Head, Finance and Administration Cluster)</em>
+          <strong style="color: black;">Rachel J. Vergara, MIT</strong><br>
+          <em style="color: #8d0000;">Bachelor of Science in Information Technology<br>Master of Information Technology</em>
         </p>
   
         <p>
-          <strong style="color: black;">Raul R. Cacho, MBA, CPA</strong><br>
-          <em style="color: #8d0000;">University Treasurer</em>
+          <strong style="color: black;">John Joshua E. Mendoza, M.I.T</strong><br>
+          <em style="color: #8d0000;">Master of Information Technology Major in Software Development</em>
         </p>
   
         <p>
-          <strong style="color: black;">Ariel D. Pineda, Ph.D., CPA</strong><br>
-          <em style="color: #8d0000;">Assistant Vice President for Internal Audit, Accreditation & TQM</em>
+          <strong style="color: black;">Michelle B. Ramos, Ph.D.</strong><br>
+          <em style="color: #8d0000;">Ph.D. in Business Management Major in Information Technology<br>Master of Information Technology<br>BS Computer Science</em>
         </p>
   
         <p>
-          <strong style="color: black;">Arlene B. Enrique, Ph.D.</strong><br>
-          <em style="color: #8d0000;">Assistant Vice President for University Registrar</em>
+          <strong style="color: black;">Rhayz Steven Kyle P. Bautista, M.I.T</strong><br>
+          <em style="color: #8d0000;">Master of Information Technology<br>Major in Software Development</em>
         </p>
   
         <a href="#" class="btn" onclick="showSection('dashboard')">BACK</a>
+
+
       </div>
     </div>
   </section>
-  
-  
-  <script>
-    function showSection(sectionId) {
-      const sections = [
-        'banner',
-        'about',
-        'login',
-        'dashboard',
-        'mission-vision',
-        'dean-info',
-        'faculty-info'
-      ];
-  
-      sections.forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.style.display = 'none';
-      });
-  
-      const target = document.getElementById(sectionId);
-      if (target) {
-        target.style.display = 'flex';
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  
-    function showMissionVision() {
-      showSection('mission-vision');
-    }
-  
-    function showDeanInfo() {
-      showSection('dean-info');
-    }
-  
-    function showFacultyInfo() {
-      showSection('faculty-info');
-    }
-  
-    function showDashboard() {
-      showSection('dashboard');
-    }
-  
-    function logoutUser() {
-      showSection('banner');
-    }
-  </script>
 
+      <footer class="footer">
+        <div class="container">
+            <p class="copyright">
+                &copy; 2025 Emery Janessa Feria Ruamero. All rights reserved.
+            </p>
+        </div>
+    </footer>
+  
+  
+    <script>
+      function showSection(sectionId) {
+        const sections = [
+          'banner',
+          'about',
+          'login',
+          'dashboard',
+          'mission-vision',
+          'dean-info',
+          'faculty-info'
+        ];
+    
+        sections.forEach(id => {
+          const el = document.getElementById(id);
+          if (el) el.style.display = 'none';
+        });
+    
+        const target = document.getElementById(sectionId);
+        if (target) {
+          target.style.display = 'flex';
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    
+      function showMissionVision() {
+        showSection('mission-vision');
+      }
+    
+      function showDeanInfo() {
+        showSection('dean-info');
+      }
+    
+      function showFacultyInfo() {
+        showSection('faculty-info');
+      }
+    
+      function showDashboard() {
+        showSection('dashboard');
+      }
+    
+      function logoutUser() {
+        showSection('banner');
+      }
+    
+      function toggleSubmenu(event, element) {
+        event.stopPropagation();
+        const submenu = element.nextElementSibling;
+    
+        document.querySelectorAll('.submenu').forEach(menu => {
+          if (menu !== submenu) {
+            menu.classList.remove('show');
+          }
+        });
+    
+        submenu.classList.toggle('show');
+      }
+    
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('.nav-bar')) {
+          document.querySelectorAll('.submenu').forEach(menu => {
+            menu.classList.remove('show');
+          });
+        }
+      });
+
+function toggleProfileMode(action) {
+  const profileInfo = document.getElementById('profile-info');
+  const profileEdit = document.getElementById('profile-edit');
+  const profileName = document.getElementById('profile-name');
+  const profileLocation = document.getElementById('profile-location');
+  const editName = document.getElementById('edit-name');
+  const editLocation = document.getElementById('edit-location');
+
+  if (action === 'edit') {
+
+    profileInfo.style.display = 'none';
+    profileEdit.style.display = 'block';
+  } else if (action === 'view') {
+
+    profileInfo.style.display = 'block';
+    profileEdit.style.display = 'none';
+
+
+    profileName.innerText = editName.value;
+    profileLocation.innerText = editLocation.value;
+  }
+}
+
+document.querySelector('.submenu li:nth-child(2) a').addEventListener('click', function () {
+  toggleProfileMode('edit');
+});
+
+document.querySelector('.submenu li:nth-child(1) a').addEventListener('click', function () {
+  toggleProfileMode('view');
+});
+
+    </script>
 </body>
 </html>
