@@ -55,6 +55,7 @@ body {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: bold;
 }
 
 .login-btn {
@@ -70,23 +71,23 @@ body {
 }
 
 .about-section {
-    min-height: 100vh; /* Ensure it takes at least the full height of the viewport */
-    padding: 40px 20px;
+    min-height: 100vh;
     background-color: #8d0000;
     display: flex;
-    align-items: center;
     justify-content: center;
-    box-sizing: border-box;
+    align-items: center;
     flex-direction: column;
-    overflow-y: auto; /* Allow scroll if the content overflows */
+    padding: 0; 
+    box-sizing: border-box;
 }
+
 
 .about-container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 40px;
-    height: auto; /* Allow the container to expand with content */
+    height: auto;
     width: 100%;
     box-sizing: border-box;
     flex-direction: column;
@@ -112,25 +113,88 @@ body {
     margin-bottom: 15px;
 }
 
-input[type="text"],
-input[type="password"] {
-    width: 100%;
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 250px; /* fixed width helps visually center */
     padding: 8px;
-    margin-top: 4px;
-    margin-bottom: 12px;
+    margin: 8px 0;
     border: 3px solid #ccc;
     border-radius: 8px;
+    text-align: center;
 }
+
+.login-submit {
+    font-size: 20px; /* or any size you prefer */
+}
+
+
+.login-box label {
+    margin-bottom: 3px;
+    text-align: center;
+    display: block;
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button,
+input[type="submit"] {
+    background-color: #8d0000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.login-box h2,
+.login-box label,
+.login-box input[type="text"],
+.login-box input[type="password"],
+.login-box button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    margin-top: 0; 
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
 
 .login-box {
     width: 100%;
     max-width: 300px;
-    padding: 10px 10px;
+    padding: 30px 20px;
     background-color: #eaeaea;
     border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
 }
 
-/* Menu styles */
+.login-box .btn {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+
+.login-box .btn:first-child {
+    margin-bottom: 1rem;
+}
+
+
 .menu {
     margin: 20px 0;
 }
@@ -150,9 +214,11 @@ input[type="password"] {
     position: relative;
     padding: 10px;
     background-color: #fff;
-    border: 1px solid gray;
+    border: none; /* removed the gray border */
+    outline: none; /* remove focus outline if any */
     border-radius: 5px;
 }
+
 
 .nav-bar a,
 .nav-bar span {
@@ -160,6 +226,8 @@ input[type="password"] {
     color: #8d0000;
     font-weight: bold;
 }
+
+
 
 .submenu {
     display: none;
@@ -172,21 +240,40 @@ input[type="password"] {
     list-style: none;
     padding: 5px 0;
     z-index: 999;
-}
+    width: 100%; 
+    box-sizing: border-box; 
+  }
+  
+  .submenu.show {
+    display: block;
+  }
 
-.submenu li {
-    padding: 5px 15px;
-}
+  .submenu li {
+    padding: 10px;
+    white-space: normal;
+    width: 100%;
+    box-sizing: border-box; 
+  }
+
+  .submenu a {
+    display: block; 
+    white-space: normal; 
+    word-wrap: break-word; 
+  }
 
 .submenu li:hover {
     background-color: #f0f0f0;
 }
 
-.nav-bar li:hover .submenu {
-    display: block;
-}
+#profile-edit input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    border: 3px solid #ccc;
+    border-radius: 8px;
+  }
 
-/* Responsive */
 @media (max-width: 600px) {
     .profile-img {
         width: 150px;
@@ -209,25 +296,26 @@ input[type="password"] {
     }
 }
 
-.back-btn {
-    display: inline-block;
-    align-self: flex-start;
-    margin-bottom: 20px;
-    background-color: #fff;
+.login-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: white;
     color: #8d0000;
     padding: 8px 16px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    border: 1px solid #8d0000;
-    transition: background-color 0.3s ease;
+    border: none;
+    outline: none;
+
 }
+
 
 .back-btn:hover {
     background-color: #f5f5f5;
 }
 
-/* Dean's Image and Information Style */
 .dean-image-container {
     display: flex;
     justify-content: center;
@@ -238,9 +326,12 @@ input[type="password"] {
 .dean-img {
     width: 200px;
     height: 200px;
-    border-radius: 15px;  /* Soft corners for the image */
+    object-fit: cover;
+    border-radius: 50%;
     border: 3px solid #8d0000;
-}
+    display: block;
+    margin: 0 auto 1rem auto;
+  }
 
 .dean-info-box {
     text-align: justify;
@@ -255,12 +346,29 @@ input[type="password"] {
 
 .dean-name h2 {
     color: #8d0000;
-    font-size: 20px;  /* You can adjust the font size */
-    font-weight: normal;  /* Or bold if you prefer */
-    margin-top: 3px;  /* Reduces the gap between the image and the name */
+    font-size: 20px; 
+    font-weight: normal; 
+    margin-top: 3px; 
   }
 
   .section-title {
-    color: #8d0000; /* Maroon */
+    color: #8d0000; 
+  }
+
+  .footer {
+    width: 100%;
+    background-color: #f5f5f5;
+    color: #8d0000;
+    text-align: center;
+    padding: 8px 0;
+    position: relative;
+    bottom: 0;
+    font-size: 14px;
   }
   
+  .footer .container {
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
