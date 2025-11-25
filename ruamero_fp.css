@@ -1,0 +1,416 @@
+body {
+    font-family: "Crimson Text", serif;
+    margin: 0;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #80170f;
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 100px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none; /* Hide initially for larger screens */
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;
+}
+
+.menu li {
+    margin-right: 20%;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #5b1515;
+        padding: 10px 0;
+        text-align: center;
+        z-index: 999;
+        margin-left: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: 10px;
+    }
+
+    .menu.show-menu {
+        display: flex;
+    }
+
+    .menu li {
+        margin: 10px;
+        margin-left: 0; /* Remove left margin for menu items */
+        margin-right: 0px; /* Remove right margin for menu items */
+    }
+}
+
+/* Main section styles */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Home section styles */
+#home {
+    width: 100%;
+    background: linear-gradient(to bottom, #80170f, #ffffff);
+    color: white;
+    text-align: center;
+    padding: 50px 50px;
+    position: relative;
+}
+
+.home-content {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cover-image {
+    max-width: 40%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.welcome-text {
+    max-width: 40%;
+    text-align: center;
+    padding: 20px;
+}
+
+.welcome-text h1 {
+    font-size: 4rem; /* Increased font size */
+    margin: 0;
+    line-height: 1; /* Ensures the text is on one line */
+}
+
+.welcome-text .projects-text {
+    font-size: 3rem; /* Adjusted font size for the projects text */
+}
+
+.highlight {
+    color: #80170f; /* Dark red for the highlighted name */
+}
+
+/* About section styles */
+#about .container {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    color: #000000; /* Default text color */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about .about-text h3 {
+    color: #80170f; /* Maroon color for the "About Me" heading */
+}
+
+#about .about-text h4,
+#about .about-text p {
+    color: #000000; /* Black for the "Hello!" and paragraph text */
+}
+
+#about .about-text h4 {
+    margin-top: 0; /* Remove default margin from h4 */
+}
+
+.me {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Center align items vertically */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+}
+
+.polaroid {
+    width: 40%;
+    text-align: center;
+    position: relative; /* Ensure relative positioning for absolutely positioned elements */
+}
+
+.polaroid img {
+    max-width: 80%;
+    height: auto;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.polaroid img:hover {
+    transform: scale(1.05); /* Scale up the image on hover */
+    box-shadow: 0 12px 20px #80170f; /* Maroon shadow on hover */
+}
+
+
+.about-text {
+    width: 50%;
+    text-align: justify;
+    font-size: 1.1rem; /* Adjusted the font size */
+    margin-top: 20px; /* Added margin top for separation */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .me {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center align items */
+    }
+
+    .polaroid {
+        width: 80%; /* Adjusted width for smaller screens */
+    }
+
+    .about-text {
+        width: 80%; /* Adjusted width for smaller screens */
+    }
+}
+
+/* Blog section styles */
+#blog {
+    background-color: #fff;
+    padding: 50px 20px;
+    color: #80170f;
+    text-align: center;
+}
+
+.blog-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.blog-post {
+    max-width: 30%; /* Adjust as needed for larger screens */
+    margin-bottom: 30px;
+    position: relative; /* Ensure relative positioning for absolutely positioned elements */
+}
+
+.blog-post img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out; /* Add transition for smooth animation */
+}
+
+.blog-post:hover img {
+    transform: scale(1.05); /* Scale up the image on hover */
+    box-shadow: 0 12px 20px rgba(128, 23, 15, 0.8); /* Maroon shadow on hover */
+}
+
+.blog-content {
+    text-align: justify;
+    padding: 10px;
+    color: #000000; /* Set the blog content text color to black */
+}
+
+.blog-content h3 {
+    color: #80170f; /* Set the titles to red */
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2.4rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .blog-post {
+        max-width: 100%; /* Display one post per row on smaller screens */
+    }
+}
+
+
+/* Portfolio section styles */
+#portfolio {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    color: #80170f;
+    text-align: center;
+    font-size: 1rem; /* Adjust the font size */
+}
+
+#portfolio p {
+    color: #000000; /* Set the "Explore my projects!" text color to black */
+}
+
+.portfolio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.item {
+    flex: 1 0 calc(30% - 20px); /* Flex basis set to 30% minus margins */
+    margin: 10px;
+    max-width: 30%;
+    min-width: 200px; /* Ensure a minimum width for smaller screens */
+    text-align: center; /* Center-align text */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space items evenly */
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .portfolio-row {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center;
+    }
+  
+    .item {
+        max-width: 100%; /* Full width for each item on smaller screens */
+        margin-bottom: 20px; /* Spacing between items */
+    }
+}
+
+.view-project {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #80170f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Contacts section styles */
+#contacts {
+    background-color: #fff;
+    padding: 50px 20px;
+    color: #80170f;
+    text-align: center;
+}
+
+.contact-info {
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #80170f;
+    border-radius: 5px;
+
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #80170f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer styles */
+footer {
+    background-color: #80170f;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 10px 0;
+}
+
+.social-links li {
+    margin: 0 10px;
+}
+
+.social-links li a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-links li a:hover {
+    color: #80170f;
+}
+
+footer .copyright {
+    color: white;
+    text-decoration: none; 
+    pointer-events: none;
+}    
