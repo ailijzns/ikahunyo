@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="pcu.css"/> <!--for external css-->
+    <title>PCU Enrollment Form</title>
+</head>
+<body>
+    <form> <!--for form container-->
+        <header> <!--for header of the container-->
+            <img src="logo.png" alt="Logo" class="logo"> <!--for logo in the container-->
+            <span>PCU ENROLLMENT FORM</span> <!--for the header text-->
+        </header>
+
+        <hr style="border: 1px solid #3a507c;"> <!--for line to separate header with the form-->
+
+        <h3>PERSONAL INFORMATION</h3> <!--for header text-->
+        <label for="fullname">Full Name: </label> <!--for text field in the form-->
+        <input type="text" id="fullname" name="fullname">
+
+        <label for="email">Email Address: </label> <!--for text field in the form-->
+        <input type="text" id="email" name="email">
+
+        <label for="contact">Contact Number: </label> <!--for text field in the form-->
+        <input type="text" id="contact" name="contact">
+
+        <label for="progc">Course/Program: </label> <!--for text field in the form-->
+        <input type="text" id="progc" name="progc">
+
+        <label for="year">Year Level: </label> <!--for text field in the form-->
+        <input type="text" id="year" name="year">
+
+        <hr style="border: 1px solid #3a507c;"> <!--for line to separate text field with the radio buttons-->
+
+        <h3>REGISTRATION TYPE</h3> <!--for header text-->
+        <div class="radio"> <!--for radio buttons in the form-->
+            <label><input type="radio" name="enroll" value="Newstud"> New Student</label> 
+            <label><input type="radio" name="enroll" value="Oldstud"> Old Student</label>
+            <label><input type="radio" name="enroll" value="Transfer"> Transferee</label>
+        </div>
+
+        <!--submit and reset buttons-->
+        <div class="button">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+</body>
+</html>

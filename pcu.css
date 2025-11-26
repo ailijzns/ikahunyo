@@ -1,0 +1,84 @@
+body { /*for the design of the whole page*/
+    font-family: serif;
+    margin: 0;
+    padding: 0;
+    background: #222866f6;
+}
+
+form { /*for the design of the conatiner*/
+    width: 400px; 
+    margin: 40px auto;
+    background: #7ba4d5;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 5px #04042c;
+}
+
+header { /*for the design of the header inside the form*/
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 10px; 
+    font-size: 150%;
+    color: #1c2146;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+header .logo { /*for the size of the logo*/
+    width: 50px;  
+    height: auto;  
+}
+
+label { /*for the texts above the text fields*/
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #0a086f;
+    margin-left: 10px;
+}
+
+h3 { /*for the design of head texts for text field and radio buttons*/
+    color: #1c2146;
+}
+
+input[type="text"] { /*for the box of text fields*/
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #04042c;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.radio { /*for the radio buttons*/
+    display: flex;
+    gap: 20px;
+    margin: 10px 0;
+}
+
+.radio label { /*for the labels of radio buttons*/
+    font-weight: normal;
+}
+
+.button { /*for the submit and reset buttons*/
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+input[type="submit"], /*base styles for submit and reset buttons*/
+input[type="reset"] {
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #1c2146;
+    font-family: serif;
+}
+
+
+
