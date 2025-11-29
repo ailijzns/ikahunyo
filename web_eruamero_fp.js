@@ -5,6 +5,12 @@ menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('show-menu'); // toggle visibility
 });
 
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('show-menu'); // hide menu
+    });
+});
+
 // JavaScript for smooth scrolling
 document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.querySelectorAll("nav ul li a");
