@@ -2,7 +2,7 @@ const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
 menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('show-menu');
+    navLinks.classList.toggle('show-menu'); // toggle visibility
 });
 
 // JavaScript for smooth scrolling
